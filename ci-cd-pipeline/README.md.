@@ -1,0 +1,26 @@
+# CI/CD Pipeline Sample Project 
+
+This project demonstrates a simple CI/CD 
+pipeline using GitLab CI/CD. It covers the 
+basics of build, test, and deploy stages. 
+
+## Pipeline Overview 
+
+The `.gitlab-ci.yml` file is the heart of 
+the CI/CD pipeline, containing: 
+- **Build Stage**: Compiling the
+application.
+- **Test Stage**: Running tests to verify
+- functionality.
+- **Deploy Stage**: Simulating deployment.
+
+## GitLab Repository 
+
+You can view the live GitLab repository
+[here](https://gitlab.com/kjadevsecops/ci-cd-sample). 
+
+## How to Run the Project 
+
+1. Clone the GitLab repository:
+   ```bash
+   git clone https://gitlab.com/kjadevsecops/ci-cd-sample.git
