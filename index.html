@@ -1,139 +1,1360 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Keith Anderson Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keith Anderson — Cloud Security Engineer & Music Tech Creator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #050D1A;
+    --blue: #0A1628;
+    --accent: #1B6FFF;
+    --teal: #00D4FF;
+    --white: #F0F4FF;
+    --gray: #8896B0;
+    --light: #C4CEDF;
+    --card: #0D1F3C;
+    --border: rgba(27,111,255,0.2);
+    --glow: rgba(27,111,255,0.15);
+  }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>My Name is Keith Anderson
-						
-						</h1>
-						<p>I am a lover of new technology and have 5 years of experience.<br />
-						built by <a href="https://www.linkedin.com/in/keithanderson1985/">@KeithAnderson</a> Vulnerability, AWS, DevSecOps Professional <a href=></a></p>
-					</header>
+  html { scroll-behavior: smooth; }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Skills</a></li>
-							<li><a href="#cta">Goals</a></li>
-						</ul>
-					</nav>
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
 
-				<!-- Main -->
-					<div id="main">
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Who is Keith Anderson</h2>
-										</header>
-										<p>My journey working in the tech space began in 2019 when I took a job within Cybersecurity as an Information Assurance/ACAS System administrator.
-											My Duties including providing my client with Vulnerability scans as well as providing NIST Risk Management framework documentation and system administration 
-											tasks where I used RHEL, Linux on a daily basis. From here,
-											I took a new role where I became an AWS Security Specialist where I provided my client with vulnerability results from AWS Guard Duty and AWS security Hub.
-											I also started to use automation tools such as Anisible scripts and Evaluate STIG to conduct STIG results for the various systems I scanned.  In addition to
-											my Cloud and Cybersecurity tasks, I have been gaining DevSecOps expereience from becoming the Gitlab point of contact and using it for my team to store scripts and code.
-											
-											
-										</p>
-										<ul class="actions">
-											
-										</ul>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5,13,26,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
 
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Skills</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Vulnerability/System Admin</h3>
-										<p>ACAS, Security Center, Nessus, Qualys, RHEL, STIGS, SCAP, Infrastructure</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>AWS Cloud</h3>
-										<p>AWS Management Console, AWS Guard Duty, AWS Security Hub</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>DevSecOps</h3>
-										<p>Gitlab, Jenkins, Piplines, CI/CD</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions special">
-										
-									</ul>
-								</footer>
-							</section>
+  .nav-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
 
-						<!-- Second Section -->
-							
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Goals</h2>
-									<p>My goals are to continue to get stronger in more cloud and devsecops tools.<br />
-									I am open to learning any new skills that will help any potential new team.</p>
-								</header>
-								
-									</ul>
-								</footer>
-							</section>
+  .nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
 
-					</div>
+  .nav-links a:hover { color: var(--white); }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2></h2>
-							<p>
-								<li><a href="" class=""></a></li>
-							</ul>
-						</section>
-						<section>
-							
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://www.linkedin.com/in/keithanderson1985/">Keith Anderson</a>.</p>
-					</footer>
+  section, .music-section { scroll-margin-top: 80px; }
 
-			</div>
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+  }
 
-	</body>
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(27,111,255,0.1);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--teal);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-dot {
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  .hero-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-name span { color: var(--accent); }
+
+  .hero-title {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    color: var(--light);
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-tagline em {
+    color: var(--teal);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: 1px solid var(--accent);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--light);
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Hero right side — stats */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--teal));
+  }
+
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .stat-card.wide {
+    grid-column: span 2;
+  }
+
+  .clearance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0,212,255,0.08);
+    border: 1px solid rgba(0,212,255,0.3);
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--teal);
+    margin-top: 0.75rem;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .section-title span { color: var(--accent); }
+
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--teal));
+    margin-bottom: 3rem;
+    border-radius: 2px;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--light);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .about-text strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .highlight-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .highlight-item h4 {
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .highlight-item p {
+    font-size: 0.9rem;
+    color: var(--light);
+    line-height: 1.5;
+  }
+
+  /* ── EXPERIENCE ── */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.4rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    box-shadow: 0 0 12px var(--accent);
+  }
+
+  .timeline-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--teal);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-company {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+  }
+
+  .timeline-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-list li {
+    font-size: 0.9rem;
+    color: var(--light);
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .timeline-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+
+  .clearance-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.2);
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--teal);
+    margin-top: 1rem;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .skill-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .skill-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill-card h3 {
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    background: rgba(27,111,255,0.08);
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.7rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    color: var(--light);
+  }
+
+  /* ── CERTS ── */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cert-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .cert-name {
+    font-size: 0.88rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .cert-status {
+    font-size: 0.72rem;
+    color: var(--gray);
+    margin-top: 0.2rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .cert-status.progress { color: var(--teal); }
+
+  /* ── PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--teal));
+  }
+
+  .project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+
+  .project-tag {
+    display: inline-block;
+    background: rgba(27,111,255,0.1);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.65rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    color: var(--teal);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .project-desc {
+    font-size: 0.88rem;
+    color: var(--light);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+  }
+
+  .project-highlights {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-highlights li {
+    font-size: 0.82rem;
+    color: var(--gray);
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .project-highlights li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.7rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .project-link {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .project-link:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  .project-note {
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-style: italic;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── MUSIC TECH ── */
+  .music-section {
+    background: linear-gradient(135deg, #050D1A 0%, #0A1A35 50%, #050D1A 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 5rem 0;
+  }
+
+  .music-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .music-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .networks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .network-badge {
+    background: rgba(27,111,255,0.06);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--light);
+    font-weight: 500;
+  }
+
+  .music-products {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .product-card:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .product-info h4 {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .product-info p {
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+
+  .product-arrow {
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  .soundos-card {
+    background: linear-gradient(135deg, #0D1F3C, #0A1628);
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-top: 1rem;
+  }
+
+  .soundos-card h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+  }
+
+  .soundos-card p {
+    font-size: 0.88rem;
+    color: var(--light);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .coming-soon {
+    display: inline-block;
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    color: var(--teal);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .edu-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .edu-degree {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-school {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .edu-note {
+    font-size: 0.88rem;
+    color: var(--light);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-text p {
+    color: var(--light);
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: var(--white);
+  }
+
+  .contact-link:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .contact-link-icon {
+    font-size: 1.2rem;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .contact-link-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.1rem;
+  }
+
+  .contact-link-info p {
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+
+  .contact-link-arrow {
+    margin-left: auto;
+    color: var(--accent);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+
+  .footer-tagline {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-style: italic;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-family: 'Space Mono', monospace;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero-grid, .about-grid, .music-grid, .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .stat-card.wide { grid-column: span 2; }
+    .nav-links { display: none; }
+    .footer-inner { flex-direction: column; gap: 0.75rem; text-align: center; }
+    .networks-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── FADE IN ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content { animation: fadeUp 0.8s ease forwards; }
+  .hero-stats { animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">KEITH ANDERSON_PORTFOLIO</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#music">Music Tech</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+  <div class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        
+        <h1 class="hero-name">KEITH<br><span>ANDERSON</span></h1>
+        <p class="hero-title">Cloud Security Engineer &amp; Music Tech Creator</p>
+        <p class="hero-tagline">
+          Building <em>secure systems</em> by day.<br>
+          Building <em>sound systems</em> by night.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="https://k3lvinkaosmusic.com" target="_blank" class="btn-secondary">K3lvin Kaos ↗</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">7+</div>
+          <div class="stat-label">Years in Tech</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1K+</div>
+          <div class="stat-label">Sync Placements</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">AWS</div>
+          <div class="stat-label">GovCloud Certified</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">TS</div>
+          <div class="stat-label">SCI Clearance</div>
+        </div>
+        <div class="stat-card wide">
+          <div class="stat-label" style="margin-bottom:0.5rem">Current Employer</div>
+          <div style="font-size:1rem;font-weight:600;color:var(--white)">Accenture Federal Services</div>
+          <div class="clearance-badge">🔒 TS/SCI + CI POLYGRAPH</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">// 01 — ABOUT</div>
+  <h2 class="section-title">WHO IS<br><span>KEITH ANDERSON</span></h2>
+  <div class="section-divider"></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a <strong>Cloud Security Engineer</strong> with 7 years of experience securing federal cloud environments — and a music producer with <strong>1,000+ sync placements</strong> on Netflix, ESPN, NBC, CBS, Showtime, and more.</p>
+      <p>I operate at the intersection of technology and creative media. By day I design zero-trust architectures, build IAM pipelines, and manage CI/CD workflows for federal clients in <strong>AWS GovCloud</strong>. By night I produce sync-ready music under the brand <strong>K3lvin Kaos</strong> — placed across major networks, streaming platforms, and national ad campaigns.</p>
+      <p>Both worlds reward the same thing: clean systems that scale, attention to detail, and building things that work under pressure. I don't fit in one box. I never have.</p>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <h4>Location</h4>
+        <p>Owings Mills, Maryland</p>
+      </div>
+      <div class="highlight-item">
+        <h4>Clearance</h4>
+        <p>Active TS/SCI with CI Polygraph</p>
+      </div>
+      <div class="highlight-item">
+        <h4>Education</h4>
+        <p>Morgan State University — Communications</p>
+      </div>
+      <div class="highlight-item">
+        <h4>Music Brand</h4>
+        <p>K3lvin Kaos — Sync Licensing Specialist</p>
+      </div>
+      <div class="highlight-item">
+        <h4>Philosophy</h4>
+        <p>"Music built like infrastructure."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="border-top:1px solid var(--border)">
+  <div class="section-label">// 02 — EXPERIENCE</div>
+  <h2 class="section-title">WORK<br><span>HISTORY</span></h2>
+  <div class="section-divider"></div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">CURRENT ROLE</div>
+      <div class="timeline-role">Cloud Security Engineer</div>
+      <div class="timeline-company">Accenture Federal Services</div>
+      <ul class="timeline-list">
+        <li>Design and implement zero-trust security architectures for federal clients</li>
+        <li>Manage AWS GovCloud environments including IAM policy pipelines and access control frameworks</li>
+        <li>Lead GitLab CI/CD workflows for secure code deployment across classified and unclassified environments</li>
+        <li>Develop Ansible automation scripts for user migration and system administration at scale</li>
+        <li>Collaborate on NIST Risk Management Framework compliance and ATO processes</li>
+        <li>Serve as GitLab point of contact, standardizing version control and pipeline processes</li>
+      </ul>
+      <div class="clearance-note">🔒 Active TS/SCI Clearance with CI Polygraph</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">PREVIOUS ROLE</div>
+      <div class="timeline-role">AWS Security Specialist</div>
+      <div class="timeline-company">Federal Contract</div>
+      <ul class="timeline-list">
+        <li>Provided vulnerability assessment results from AWS GuardDuty and AWS Security Hub</li>
+        <li>Conducted STIG evaluations using SCAP and Evaluate-STIG tooling across multiple system types</li>
+        <li>Developed and maintained Ansible scripts for automated vulnerability remediation</li>
+        <li>Supported cloud security posture management across AWS environments</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">ENTRY LEVEL — 2019</div>
+      <div class="timeline-role">Information Assurance / ACAS System Administrator</div>
+      <div class="timeline-company">Federal Contract</div>
+      <ul class="timeline-list">
+        <li>Performed vulnerability scans using ACAS, Nessus, and Security Center</li>
+        <li>Produced NIST RMF documentation and system administration on RHEL/Linux systems</li>
+        <li>Supported assessment and authorization (A&A) activities for federal systems</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="border-top:1px solid var(--border)">
+  <div class="section-label">// 03 — SKILLS</div>
+  <h2 class="section-title">TECHNICAL<br><span>EXPERTISE</span></h2>
+  <div class="section-divider"></div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-icon">☁️</div>
+      <h3>Cloud & Infrastructure</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">AWS GovCloud</span>
+        <span class="skill-tag">IAM</span>
+        <span class="skill-tag">Zero Trust</span>
+        <span class="skill-tag">GuardDuty</span>
+        <span class="skill-tag">Security Hub</span>
+        <span class="skill-tag">CSPM</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">⚙️</div>
+      <h3>DevSecOps & Automation</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">GitLab CI/CD</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">Ansible</span>
+        <span class="skill-tag">Jenkins</span>
+        <span class="skill-tag">Terraform</span>
+        <span class="skill-tag">Pipelines</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🔒</div>
+      <h3>Security & Compliance</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">NIST RMF</span>
+        <span class="skill-tag">STIGs</span>
+        <span class="skill-tag">SCAP</span>
+        <span class="skill-tag">ACAS/Nessus</span>
+        <span class="skill-tag">CVSS</span>
+        <span class="skill-tag">ATO Process</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">💻</div>
+      <h3>Web & Creative Tech</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag">Netlify</span>
+        <span class="skill-tag">Cloudflare</span>
+        <span class="skill-tag">Claude Code</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🖥️</div>
+      <h3>Operating Systems</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">RHEL</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">Windows Server</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🎵</div>
+      <h3>Music Tech</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Sync Licensing</span>
+        <span class="skill-tag">FL Studio</span>
+        <span class="skill-tag">DISCO</span>
+        <span class="skill-tag">Tunesat</span>
+        <span class="skill-tag">Trqk</span>
+        <span class="skill-tag">Data Dashboards</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section style="border-top:1px solid var(--border);padding-top:3rem;padding-bottom:3rem">
+  <div class="section-label">// 04 — CERTIFICATIONS</div>
+  <h2 class="section-title">CERTS &<br><span>CREDENTIALS</span></h2>
+  <div class="section-divider"></div>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-icon">☁️</div>
+      <div>
+        <div class="cert-name">AWS Certified Cloud Practitioner</div>
+        <div class="cert-status">Amazon Web Services</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔐</div>
+      <div>
+        <div class="cert-name">CompTIA Security+ CE</div>
+        <div class="cert-status">CompTIA</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🛡️</div>
+      <div>
+        <div class="cert-name">ISC2 Candidate</div>
+        <div class="cert-status">ISC2</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📊</div>
+      <div>
+        <div class="cert-name">Vulnerability Management: CVSS</div>
+        <div class="cert-status">Assessing Risk with CVSS</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔄</div>
+      <div>
+        <div class="cert-name">Microsoft Azure Fundamentals</div>
+        <div class="cert-status progress">AZ-900 — In Progress</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="border-top:1px solid var(--border)">
+  <div class="section-label">// 05 — PROJECTS</div>
+  <h2 class="section-title">FEATURED<br><span>WORK</span></h2>
+  <div class="section-divider"></div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-tag">REACT · NETLIFY · CLOUDFLARE</div>
+      <div class="project-title">K3lvin Kaos Music Portfolio</div>
+      <p class="project-desc">Full production music and sync licensing portfolio site. Migrated from a $496/year Wix platform to a lean $84/year DevOps stack without sacrificing design quality.</p>
+      <ul class="project-highlights">
+        <li>CI/CD pipeline: Lovable + Claude Code → GitHub → Netlify (auto-deploys in 60s)</li>
+        <li>Cloudflare DNS with DDoS protection and enterprise-grade routing</li>
+        <li>Integrated shop with Gumroad, Calendly booking, and email capture</li>
+        <li>Separation of concerns across every layer — same principle as zero-trust architecture</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://k3lvinkaosmusic.com" target="_blank" class="project-link">Live Site ↗</a>
+        <a href="https://github.com/kanderson2385/vibe-licensing-hub" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">ANSIBLE · IAM · AUTOMATION</div>
+      <div class="project-title">Ansible User Migration Pipeline</div>
+      <p class="project-desc">Designed and implemented an Ansible-based automated user migration system for a federal client — moving users across environments at scale while maintaining access control integrity.</p>
+      <ul class="project-highlights">
+        <li>Automated provisioning and deprovisioning workflows reducing manual admin time</li>
+        <li>Integrated with existing IAM policies maintaining least-privilege access throughout</li>
+        <li>Fully documented for ATO compliance and audit trail requirements</li>
+        <li>Reusable playbook structure adaptable across multiple system types</li>
+      </ul>
+      <p class="project-note">⚠️ Sensitive client details omitted per clearance requirements</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">GITLAB · CI/CD · DEVSECOPS</div>
+      <div class="project-title">Classification-Level CI/CD Pipeline</div>
+      <p class="project-desc">Architected and managed a CI/CD pipeline system spanning multiple classification levels — enabling secure, controlled code deployment from development through production.</p>
+      <ul class="project-highlights">
+        <li>Designed pipeline architecture enforcing strict separation between classification levels</li>
+        <li>Established GitLab as team standard for version control across the program</li>
+        <li>Integrated automated security checks at each stage before code promotion</li>
+        <li>Standardized release processes and reduced deployment errors across the team</li>
+      </ul>
+      <p class="project-note">⚠️ Specific client and system details omitted per clearance requirements</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MUSIC TECH -->
+<div class="music-section" id="music">
+  <div class="music-inner">
+    <div class="section-label">// 06 — MUSIC TECH</div>
+    <h2 class="section-title">K3LVIN KAOS —<br><span>THE MUSIC SIDE</span></h2>
+    <div class="section-divider"></div>
+    <p style="color:var(--light);font-size:1rem;margin-bottom:2rem;font-weight:300;font-style:italic;">This is where the two worlds collide.</p>
+    <div class="music-grid">
+      <div>
+        <p style="color:var(--light);line-height:1.8;margin-bottom:1.25rem;font-weight:300;">Under the brand <strong style="color:var(--white)">K3lvin Kaos</strong>, I produce sync-ready music for film, television, advertising, and digital media. With 1,000+ placements across major networks, the catalog spans cinematic hip-hop, epic hip-hop, R&amp;B &amp; soul, and sports promos — all one-stop clearance.</p>
+        <p style="color:var(--light);line-height:1.8;margin-bottom:1.5rem;font-weight:300;">The same engineering discipline I bring to federal cloud environments applies to how I run my music business. Custom data dashboards for placement tracking. AI-assisted production workflows. A website built on the same DevOps stack I use professionally.</p>
+
+        <div style="margin-bottom:1.5rem">
+          <div class="section-label" style="margin-bottom:0.75rem">PLACEMENT CREDITS</div>
+          <div class="networks-grid">
+            <div class="network-badge">Netflix</div>
+            <div class="network-badge">ESPN</div>
+            <div class="network-badge">NBC</div>
+            <div class="network-badge">CBS</div>
+            <div class="network-badge">ABC</div>
+            <div class="network-badge">Showtime</div>
+            <div class="network-badge">Discovery</div>
+            <div class="network-badge">Amazon MGM</div>
+            <div class="network-badge">MSG Networks</div>
+          </div>
+        </div>
+
+        <div class="soundos-card">
+          <div class="coming-soon">COMING SOON</div>
+          <h3>SoundOS: Run Your Sound Like A System</h3>
+          <p>An operating system for music creators who think in systems. Built at the intersection of DevOps thinking and music production workflow.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label" style="margin-bottom:1rem">MUSIC TECH PRODUCTS</div>
+        <div class="music-products">
+          <a href="https://k3lvinkaosmusic.com" target="_blank" class="product-card">
+            <div class="product-info">
+              <h4>K3lvin Kaos Portfolio</h4>
+              <p>Full sync licensing portfolio site</p>
+            </div>
+            <div class="product-arrow">→</div>
+          </a>
+          <a href="https://k3lvinkaos.gumroad.com/l/vpqobe" target="_blank" class="product-card">
+            <div class="product-info">
+              <h4>Sync Intelligence Report</h4>
+              <p>Custom placement data dashboards</p>
+            </div>
+            <div class="product-arrow">→</div>
+          </a>
+          <a href="https://k3lvinkaos.gumroad.com/l/jhmyds" target="_blank" class="product-card">
+            <div class="product-info">
+              <h4>The $84/Year Website Blueprint</h4>
+              <p>Free guide — the exact stack I used</p>
+            </div>
+            <div class="product-arrow">→</div>
+          </a>
+          <a href="https://calendly.com/kaos4beats/30min" target="_blank" class="product-card">
+            <div class="product-info">
+              <h4>The Creators Stack</h4>
+              <p>Done-for-you website build service</p>
+            </div>
+            <div class="product-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<section style="border-top:1px solid var(--border)">
+  <div class="section-label">// 07 — EDUCATION</div>
+  <h2 class="section-title">ACADEMIC<br><span>BACKGROUND</span></h2>
+  <div class="section-divider"></div>
+  <div class="edu-card">
+    <div class="edu-icon">🎓</div>
+    <div>
+      <div class="edu-degree">Bachelor of Arts — Communications</div>
+      <div class="edu-school">Morgan State University · Baltimore, MD</div>
+      <p class="edu-note">Studied communications with a focus on media, messaging, and storytelling — foundational skills that directly inform how I communicate complex technical concepts and position music for sync licensing opportunities. Morgan State's communications program built the bridge between technical precision and creative expression that defines my work today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="border-top:1px solid var(--border)">
+  <div class="section-label">// 08 — CONTACT</div>
+  <h2 class="section-title">LET'S<br><span>CONNECT</span></h2>
+  <div class="section-divider"></div>
+  <div class="contact-grid">
+    <div class="contact-text">
+      <p>Whether it's cloud security, music licensing, or building something at the intersection of both — I'm open to conversations.</p>
+      <p>I bring a unique perspective to every project: the discipline of a federal security engineer and the creative instinct of a music producer with over a thousand sync placements.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:info@k3lvinkaosmusic.com" class="contact-link">
+        <div class="contact-link-icon">📧</div>
+        <div class="contact-link-info">
+          <h4>Email</h4>
+          <p>info@k3lvinkaosmusic.com</p>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+      <a href="https://linkedin.com/in/kanderson2385" target="_blank" class="contact-link">
+        <div class="contact-link-icon">💼</div>
+        <div class="contact-link-info">
+          <h4>LinkedIn</h4>
+          <p>linkedin.com/in/kanderson2385</p>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+      <a href="https://github.com/kanderson2385" target="_blank" class="contact-link">
+        <div class="contact-link-icon">🐙</div>
+        <div class="contact-link-info">
+          <h4>GitHub</h4>
+          <p>github.com/kanderson2385</p>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+      <a href="https://k3lvinkaosmusic.com" target="_blank" class="contact-link">
+        <div class="contact-link-icon">🎵</div>
+        <div class="contact-link-info">
+          <h4>K3lvin Kaos</h4>
+          <p>k3lvinkaosmusic.com</p>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    
+    <div class="footer-tagline">"Music built like infrastructure."</div>
+    <div class="footer-copy">© 2026 Keith Anderson</div>
+  </div>
+</footer>
+
+</body>
 </html>
