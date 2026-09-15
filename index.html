@@ -902,8 +902,8 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#music">Music Tech</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1039,10 +1039,76 @@
 
   </div>
 </section>
+<!-- PROJECTS -->
+<section id="projects" style="border-top:1px solid var(--border)">
+  <div class="section-label">// 03 — PROJECTS</div>
+  <h2 class="section-title">FEATURED<br><span>WORK</span></h2>
+  <div class="section-divider"></div>
+  <div class="projects-grid">
 
+    <div class="project-card">
+      <div class="project-tag">TYPESCRIPT · SUPABASE · CLOUDFLARE</div>
+      <div class="project-title">SessionOS</div>
+      <p class="project-desc">AI-powered workflow and collaboration platform for sync composers, writer camps, and sync licensing agencies. Built independently from architecture through deployment — bringing session collaboration, split sheet documentation, and sync-readiness scoring into one workflow.</p>
+      <ul class="project-highlights">
+        <li>Designed and applied a 13-migration Postgres schema with Row-Level Security policies</li>
+        <li>Configured end-to-end Google OAuth authentication</li>
+        <li>Deployed via GitHub → Cloudflare Workers Builds → Cloudflare DNS</li>
+        <li>Five core workflow areas: Collab Studio, Track Discovery, Free Agency, Matchmaker, and Search</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://sessionos.io" target="_blank" class="project-link">Live Site ↗</a>
+        <a href="https://github.com/kanderson2385/sessionos-overview" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">REACT · NETLIFY · CLOUDFLARE</div>
+      <div class="project-title">K3lvin Kaos Music Portfolio</div>
+      <p class="project-desc">Full production music and sync licensing portfolio site. Migrated from a $496/year Wix platform to a lean $84/year DevOps stack without sacrificing design quality.</p>
+      <ul class="project-highlights">
+        <li>CI/CD pipeline: Lovable + Claude Code → GitHub → Netlify (auto-deploys in 60s)</li>
+        <li>Cloudflare DNS with DDoS protection and enterprise-grade routing</li>
+        <li>Integrated shop with Gumroad, Calendly booking, and email capture</li>
+        <li>Separation of concerns across every layer — same principle as zero-trust architecture</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://k3lvinkaosmusic.com" target="_blank" class="project-link">Live Site ↗</a>
+        <a href="https://github.com/kanderson2385/vibe-licensing-hub" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">ANSIBLE · IAM · AUTOMATION</div>
+      <div class="project-title">Ansible User Migration Pipeline</div>
+      <p class="project-desc">Designed and implemented an Ansible-based automated user migration system for a federal client — moving users across environments at scale while maintaining access control integrity.</p>
+      <ul class="project-highlights">
+        <li>Automated provisioning and deprovisioning workflows reducing manual admin time</li>
+        <li>Integrated with existing IAM policies maintaining least-privilege access throughout</li>
+        <li>Fully documented for ATO compliance and audit trail requirements</li>
+        <li>Reusable playbook structure adaptable across multiple system types</li>
+      </ul>
+      <p class="project-note">⚠️ Sensitive client details omitted per clearance requirements</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">GITLAB · CI/CD · DEVSECOPS</div>
+      <div class="project-title">Classification-Level CI/CD Pipeline</div>
+      <p class="project-desc">Architected and managed a CI/CD pipeline system spanning multiple classification levels — enabling secure, controlled code deployment from development through production.</p>
+      <ul class="project-highlights">
+        <li>Designed pipeline architecture enforcing strict separation between classification levels</li>
+        <li>Established GitLab as team standard for version control across the program</li>
+        <li>Integrated automated security checks at each stage before code promotion</li>
+        <li>Standardized release processes and reduced deployment errors across the team</li>
+      </ul>
+      <p class="project-note">⚠️ Specific client and system details omitted per clearance requirements</p>
+    </div>
+
+  </div>
+</section>
 <!-- SKILLS -->
 <section id="skills" style="border-top:1px solid var(--border)">
-  <div class="section-label">// 03 — SKILLS</div>
+  <div class="section-label">// 04 — SKILLS</div>
   <h2 class="section-title">TECHNICAL<br><span>EXPERTISE</span></h2>
   <div class="section-divider"></div>
   <div class="skills-grid">
@@ -1117,10 +1183,9 @@
     </div>
   </div>
 </section>
-
 <!-- CERTIFICATIONS -->
 <section style="border-top:1px solid var(--border);padding-top:3rem;padding-bottom:3rem">
-  <div class="section-label">// 04 — CERTIFICATIONS</div>
+  <div class="section-label">// 05 — CERTIFICATIONS</div>
   <h2 class="section-title">CERTS &<br><span>CREDENTIALS</span></h2>
   <div class="section-divider"></div>
   <div class="certs-grid">
@@ -1159,74 +1224,6 @@
         <div class="cert-status progress">AZ-900 — In Progress</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" style="border-top:1px solid var(--border)">
-  <div class="section-label">// 05 — PROJECTS</div>
-  <h2 class="section-title">FEATURED<br><span>WORK</span></h2>
-  <div class="section-divider"></div>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div class="project-tag">TYPESCRIPT · SUPABASE · CLOUDFLARE</div>
-      <div class="project-title">SessionOS</div>
-      <p class="project-desc">AI-powered workflow and collaboration platform for sync composers, writer camps, and sync licensing agencies. Built independently from architecture through deployment — bringing session collaboration, split sheet documentation, and sync-readiness scoring into one workflow.</p>
-      <ul class="project-highlights">
-        <li>Designed and applied a 13-migration Postgres schema with Row-Level Security policies</li>
-        <li>Configured end-to-end Google OAuth authentication</li>
-        <li>Deployed via GitHub → Cloudflare Workers Builds → Cloudflare DNS</li>
-        <li>Five core workflow areas: Collab Studio, Track Discovery, Free Agency, Matchmaker, and Search</li>
-      </ul>
-      <div class="project-links">
-        <a href="https://sessionos.io" target="_blank" class="project-link">Live Site ↗</a>
-        <a href="https://github.com/kanderson2385/sessionos-overview" target="_blank" class="project-link">GitHub ↗</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-tag">REACT · NETLIFY · CLOUDFLARE</div>
-      <div class="project-title">K3lvin Kaos Music Portfolio</div>
-      <p class="project-desc">Full production music and sync licensing portfolio site. Migrated from a $496/year Wix platform to a lean $84/year DevOps stack without sacrificing design quality.</p>
-      <ul class="project-highlights">
-        <li>CI/CD pipeline: Lovable + Claude Code → GitHub → Netlify (auto-deploys in 60s)</li>
-        <li>Cloudflare DNS with DDoS protection and enterprise-grade routing</li>
-        <li>Integrated shop with Gumroad, Calendly booking, and email capture</li>
-        <li>Separation of concerns across every layer — same principle as zero-trust architecture</li>
-      </ul>
-      <div class="project-links">
-        <a href="https://k3lvinkaosmusic.com" target="_blank" class="project-link">Live Site ↗</a>
-        <a href="https://github.com/kanderson2385/vibe-licensing-hub" target="_blank" class="project-link">GitHub ↗</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-tag">ANSIBLE · IAM · AUTOMATION</div>
-      <div class="project-title">Ansible User Migration Pipeline</div>
-      <p class="project-desc">Designed and implemented an Ansible-based automated user migration system for a federal client — moving users across environments at scale while maintaining access control integrity.</p>
-      <ul class="project-highlights">
-        <li>Automated provisioning and deprovisioning workflows reducing manual admin time</li>
-        <li>Integrated with existing IAM policies maintaining least-privilege access throughout</li>
-        <li>Fully documented for ATO compliance and audit trail requirements</li>
-        <li>Reusable playbook structure adaptable across multiple system types</li>
-      </ul>
-      <p class="project-note">⚠️ Sensitive client details omitted per clearance requirements</p>
-    </div>
-
-    <div class="project-card">
-      <div class="project-tag">GITLAB · CI/CD · DEVSECOPS</div>
-      <div class="project-title">Classification-Level CI/CD Pipeline</div>
-      <p class="project-desc">Architected and managed a CI/CD pipeline system spanning multiple classification levels — enabling secure, controlled code deployment from development through production.</p>
-      <ul class="project-highlights">
-        <li>Designed pipeline architecture enforcing strict separation between classification levels</li>
-        <li>Established GitLab as team standard for version control across the program</li>
-        <li>Integrated automated security checks at each stage before code promotion</li>
-        <li>Standardized release processes and reduced deployment errors across the team</li>
-      </ul>
-      <p class="project-note">⚠️ Specific client and system details omitted per clearance requirements</p>
-    </div>
-
   </div>
 </section>
 
